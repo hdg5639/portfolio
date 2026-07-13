@@ -1,13 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="한동균의 성격, 취향, 프로젝트와 TMI를 소개하는 MPA 웹사이트">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>I AM | 한동균은 이런 사람</title>
 </head>
-<body>
-    Hello World<br>
-    Hello SSAFY<br>
-    Hello Gumi
+<body data-page="home">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="한동균 사용설명서 홈">
+      <span class="brand-mark">I AM</span>
+      <span class="brand-text">한동균 사용설명서</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="주요 메뉴">
+      <a class="nav-link" data-page="home" href="index.html">한동균은 이런 사람</a>
+      <a class="nav-link" data-page="lifestyle" href="lifestyle.html">일상의 취향</a>
+      <a class="nav-link" data-page="projects" href="projects.html">만들고 몰입한 것</a>
+      <a class="nav-link" data-page="tmi" href="tmi.html">TMI &amp; 퀴즈</a>
+    </nav>
+
+    <div class="header-status" aria-label="게이미피케이션 현황">
+      <span>🌱 <strong id="header-xp">0 XP</strong></span>
+      <span>🏅 <strong id="header-badges">0/4</strong></span>
+    </div>
+
+    <button class="menu-button" id="menu-button" type="button" aria-label="모바일 메뉴 열기" aria-controls="mobile-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴">
+    <a class="mobile-nav-link" data-page="home" href="index.html">🙂 한동균은 이런 사람</a>
+    <a class="mobile-nav-link" data-page="lifestyle" href="lifestyle.html">🎹 일상의 취향</a>
+    <a class="mobile-nav-link" data-page="projects" href="projects.html">🛠️ 만들고 몰입한 것</a>
+    <a class="mobile-nav-link" data-page="tmi" href="tmi.html">🧩 TMI &amp; 퀴즈</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero section-shell">
+    <div class="hero-copy">
+      <span class="eyebrow">인간 한동균 사용설명서 v2.0</span>
+      <h1>낯을 조금 가립니다.<br>친해지면 <em>꽤 시끄러워집니다.</em></h1>
+      <p class="hero-lead">한동균에 대해 간단히 설명하자면, 혼자 있는 시간을 좋아하는 집돌이입니다.</p>
+      <p class="hero-description">게임을 하거나 피아노를 치면서 쉬고, 가끔 답답하면 별다른 목적지 없이 드라이브를 나갑니다. 궁금한 것은 납득할 때까지 찾아보는 편이고, 물건 하나를 살 때도 성능과 가격을 한참 비교합니다.</p>
+      <div class="tag-list" aria-label="성격 키워드">
+        <span>#낯가림있음</span><span>#친해지면말많음</span><span>#납득해야넘어감</span><span>#가성비중요</span><span>#한번꽂히면깊게팜</span>
+      </div>
+      <div class="button-row">
+        <a class="button button-primary" href="lifestyle.html">내 일상 취향 구경하기 →</a>
+        <button class="button button-secondary" id="greeting-button" type="button">👋 인사 남기기 <small>+15 XP</small></button>
+      </div>
+    </div>
+
+    <aside class="profile-card card">
+      <img class="profile-image" src="assets/images/profile.svg" alt="커피를 들고 있는 한동균 캐릭터 일러스트">
+      <div class="profile-content">
+        <div class="profile-heading">
+          <div><h2>한동균</h2><p>현실에 발붙인 ISTP</p></div>
+          <span class="status-chip">사용 가능</span>
+        </div>
+        <dl class="profile-list">
+          <div><dt>첫인상</dt><dd>조용하고 차분함</dd></div>
+          <div><dt>에너지 충전</dt><dd>혼자만의 시간</dd></div>
+          <div><dt>행동 방식</dt><dd>큰 틀만 계획</dd></div>
+          <div><dt>주 활동지</dt><dd>집 · SSAFY</dd></div>
+        </dl>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section-shell compact-section">
+    <div class="section-heading left-heading">
+      <span class="section-kicker">HOW TO USE</span>
+      <h2>대충 이런 사람입니다</h2>
+      <p>장점만 늘어놓기보다 실제 생활에서 드러나는 모습을 적었습니다.</p>
+    </div>
+    <div class="three-grid">
+      <article class="card info-card reveal-card">
+        <span class="card-icon">🧊</span><h3>처음 만났을 때</h3>
+        <p>낯을 조금 가려 말수가 적습니다. 먼저 말을 걸어주면 생각보다 금방 편해집니다.</p>
+      </article>
+      <article class="card info-card reveal-card">
+        <span class="card-icon">🎮</span><h3>편해진 다음</h3>
+        <p>별것 아닌 일에도 드립을 치고, 관심 있는 이야기가 나오면 갑자기 말이 많아집니다.</p>
+      </article>
+      <article class="card info-card reveal-card">
+        <span class="card-icon">🔍</span><h3>관심이 생기면</h3>
+        <p>대충 넘어가기보다 납득할 만한 답이 나올 때까지 찾아보는 편입니다.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-shell compact-section">
+    <article class="contradiction-card">
+      <div><span class="section-kicker">KNOWN ISSUES</span><h2>나의 사소한 모순</h2></div>
+      <ul>
+        <li>귀찮은 걸 싫어해서 나중에 덜 귀찮으려고 미리 더 귀찮은 일을 벌입니다.</li>
+        <li>혼자 있는 시간이 꼭 필요하지만 너무 오래 혼자 있으면 또 심심해합니다.</li>
+        <li>현실적으로 따지면서도 가끔 쓸데없이 큰 상상을 합니다.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Donggyun Han · HTML + CSS + Vanilla JS</p>
+    <div class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="lifestyle.html">취향</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="tmi.html">퀴즈</a>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <strong id="toast-title">알림</strong>
+  <span id="toast-message">처리되었습니다.</span>
+</div>
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" type="button" aria-label="팝업 닫기">×</button>
+    <div class="modal-icon" id="modal-icon">👋</div>
+    <h2 id="modal-title">반갑습니다</h2>
+    <div id="modal-content"></div>
+  </section>
+</div>
+<script src="assets/js/app.js"></script>
+
 </body>
 </html>
