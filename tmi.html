@@ -42,41 +42,51 @@
 </header>
 
 <main>
-  <section class="page-hero section-shell">
+  <section class="page-hero section-shell tmi-hero">
     <div>
       <span class="eyebrow">TMI &amp; CHALLENGE</span>
       <h1>쓸데없지만 기억에 남는 정보</h1>
       <p>설명서 곳곳의 내용을 섞어 만든 퀴즈입니다. 비슷한 보기가 많아서 대충 읽으면 은근히 헷갈릴 수 있습니다.</p>
     </div>
-    <img src="assets/images/tmi.svg" alt="물음표 카드와 배지 일러스트">
+
+    <article class="card gamification-card hero-master-card" aria-label="설명서 마스터 진행도">
+      <div class="master-card-top">
+        <div class="master-card-heading">
+          <span class="section-kicker">MANUAL LEVEL</span>
+          <h2>설명서 마스터</h2>
+        </div>
+        <button class="master-reset-button" id="reset-button" type="button" aria-label="활동 기록 초기화">↻ <span>초기화</span></button>
+      </div>
+
+      <div class="level-line master-level-line">
+        <div><span id="level-name">탐색 중</span><strong id="xp-label">0 / 200 XP</strong></div>
+        <progress id="xp-progress" max="200" value="0">0%</progress>
+      </div>
+
+      <div class="master-badge-line">
+        <span>획득 배지</span>
+        <div class="badge-grid master-badge-grid">
+          <div class="badge-item" data-badge="greeting"><span>👋</span><strong>첫인사</strong></div>
+          <div class="badge-item" data-badge="explorer"><span>🧭</span><strong>탐험가</strong></div>
+          <div class="badge-item" data-badge="empathy"><span>💚</span><strong>공감</strong></div>
+          <div class="badge-item" data-badge="quiz"><span>🏆</span><strong>퀴즈</strong></div>
+        </div>
+      </div>
+    </article>
   </section>
 
   <section class="section-shell tmi-layout compact-section">
-    <div class="tmi-column">
-      <article class="card tmi-card">
-        <div class="section-heading left-heading"><span class="section-kicker">SMALL FACTS</span><h2>사소한 TMI</h2></div>
-        <dl class="tmi-list">
-          <div><dt>집중 환경</dt><dd>너무 조용한 곳보다 약간의 생활 소음이 있는 곳</dd></div>
-          <div><dt>커피</dt><dd>큰 것 하나를 옆에 두고 오래 조금씩 마시는 편</dd></div>
-          <div><dt>요즘 음악</dt><dd>Back Number 노래를 자주 듣는 중</dd></div>
-          <div><dt>게임 취향</dt><dd>FPS와 RPG 선호, AOS는 별로</dd></div>
-          <div><dt>구매 순서</dt><dd>성능 확인 → 후보 비교 → 가격 비교</dd></div>
-          <div><dt>최근 검색</dt><dd>가성비 좋은 청소기</dd></div>
-        </dl>
-      </article>
-
-      <article class="card gamification-card">
-        <div class="level-line"><div><span id="level-name">탐색 중</span><strong id="xp-label">0 / 200 XP</strong></div><progress id="xp-progress" max="200" value="0">0%</progress></div>
-        <h2>획득한 배지</h2>
-        <div class="badge-grid">
-          <div class="badge-item" data-badge="greeting"><span>👋</span><strong>첫인사</strong></div>
-          <div class="badge-item" data-badge="explorer"><span>🧭</span><strong>페이지 탐험가</strong></div>
-          <div class="badge-item" data-badge="empathy"><span>💚</span><strong>공감 요정</strong></div>
-          <div class="badge-item" data-badge="quiz"><span>🏆</span><strong>퀴즈 완주</strong></div>
-        </div>
-        <button class="button button-danger" id="reset-button" type="button">활동 기록 초기화</button>
-      </article>
-    </div>
+    <article class="card tmi-card">
+      <div class="section-heading left-heading"><span class="section-kicker">SMALL FACTS</span><h2>사소한 TMI</h2></div>
+      <dl class="tmi-list">
+        <div><dt>집중 환경</dt><dd>너무 조용한 곳보다 약간의 생활 소음이 있는 곳</dd></div>
+        <div><dt>커피</dt><dd>큰 것 하나를 옆에 두고 오래 조금씩 마시는 편</dd></div>
+        <div><dt>요즘 음악</dt><dd>Back Number 노래를 자주 듣는 중</dd></div>
+        <div><dt>게임 취향</dt><dd>FPS와 RPG 선호, AOS는 별로</dd></div>
+        <div><dt>구매 순서</dt><dd>성능 확인 → 후보 비교 → 가격 비교</dd></div>
+        <div><dt>최근 검색</dt><dd>가성비 좋은 청소기</dd></div>
+      </dl>
+    </article>
 
     <article class="card quiz-card">
       <div class="quiz-header"><div><span class="section-kicker">QUIZ</span><h2>한동균 고인물 테스트</h2></div><span id="quiz-counter">1 / 8</span></div>
