@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="한동균의 성격, 취향, 프로젝트와 TMI를 소개하는 MPA 웹사이트">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>I AM | 만들고 몰입한 것</title>
+</head>
+<body data-page="projects">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="한동균 사용설명서 홈">
+      <span class="brand-mark">I AM</span>
+      <span class="brand-text">한동균 사용설명서</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="주요 메뉴">
+      <a class="nav-link" data-page="home" href="index.html">한동균은 이런 사람</a>
+      <a class="nav-link" data-page="lifestyle" href="lifestyle.html">일상의 취향</a>
+      <a class="nav-link" data-page="projects" href="projects.html">만들고 몰입한 것</a>
+      <a class="nav-link" data-page="tmi" href="tmi.html">TMI &amp; 퀴즈</a>
+    </nav>
+
+    <div class="header-status" aria-label="게이미피케이션 현황">
+      <span>🌱 <strong id="header-xp">0 XP</strong></span>
+      <span>🏅 <strong id="header-badges">0/4</strong></span>
+    </div>
+
+    <button class="menu-button" id="menu-button" type="button" aria-label="모바일 메뉴 열기" aria-controls="mobile-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴">
+    <a class="mobile-nav-link" data-page="home" href="index.html">🙂 한동균은 이런 사람</a>
+    <a class="mobile-nav-link" data-page="lifestyle" href="lifestyle.html">🎹 일상의 취향</a>
+    <a class="mobile-nav-link" data-page="projects" href="projects.html">🛠️ 만들고 몰입한 것</a>
+    <a class="mobile-nav-link" data-page="tmi" href="tmi.html">🧩 TMI &amp; 퀴즈</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero section-shell">
+    <div>
+      <span class="eyebrow">MADE &amp; IMMERSED</span>
+      <h1>만들고 몰입한 것</h1>
+      <p>개발 프로젝트도 제 취향 중 하나입니다. 필요한 것이 없거나 구조가 궁금하면 직접 만들어보는 편입니다.</p>
+    </div>
+    <img src="assets/images/projects.svg" alt="서버와 클라우드, 코드 창 일러스트">
+  </section>
+
+  <section class="section-shell compact-section">
+    <div class="project-tools card">
+      <label class="search-box" for="project-search"><span>🔎</span><input id="project-search" type="search" placeholder="프로젝트 이름이나 키워드 검색"></label>
+      <div class="filter-buttons" aria-label="프로젝트 분류">
+        <button class="filter-button active" type="button" data-filter="all">전체</button>
+        <button class="filter-button" type="button" data-filter="infra">인프라</button>
+        <button class="filter-button" type="button" data-filter="service">웹 서비스</button>
+        <button class="filter-button" type="button" data-filter="ai">AI</button>
+      </div>
+    </div>
+
+    <div class="project-grid" id="project-grid">
+      <article class="project-card card" data-category="infra" data-search="gamjabox 감자박스 proxmox iaas cloudflare 서버 인프라">
+        <div class="project-top"><span class="project-symbol">☁️</span><span class="category-chip">인프라</span></div>
+        <h2>GamjaBox</h2>
+        <p>개인 Proxmox 서버 위에서 VM 생성, SSH 접속, 포트 노출과 접근 제어를 자동화한 셀프호스팅 IaaS 서비스입니다.</p>
+        <div class="project-meta"><span>실운영 프로젝트</span><button class="like-button" type="button" data-project="gamjabox" aria-label="GamjaBox 좋아요">♡ <span>좋아요</span></button></div>
+      </article>
+      <article class="project-card card" data-category="service" data-search="새로고침 refresh spring msa websocket 환경 웹 서비스">
+        <div class="project-top"><span class="project-symbol">🌿</span><span class="category-chip">웹 서비스</span></div>
+        <h2>새로고침</h2>
+        <p>환경 보호 활동을 기록하고 사용자끼리 소통할 수 있도록 실시간 채팅과 알림 기능을 구현한 팀 프로젝트입니다.</p>
+        <div class="project-meta"><span>팀 프로젝트</span><button class="like-button" type="button" data-project="refresh" aria-label="새로고침 좋아요">♡ <span>좋아요</span></button></div>
+      </article>
+      <article class="project-card card" data-category="ai" data-search="eventory 이벤토리 행사 추천 gpt ai 인공지능">
+        <div class="project-top"><span class="project-symbol">🗓️</span><span class="category-chip">AI</span></div>
+        <h2>Eventory</h2>
+        <p>행사 정보를 모아 보여주고 사용자의 관심사를 바탕으로 어울리는 행사를 추천하는 플랫폼입니다.</p>
+        <div class="project-meta"><span>AI 활용</span><button class="like-button" type="button" data-project="eventory" aria-label="Eventory 좋아요">♡ <span>좋아요</span></button></div>
+      </article>
+      <article class="project-card card" data-category="service" data-search="출결 관리 시스템 동아리 자동화 attendance">
+        <div class="project-top"><span class="project-symbol">✅</span><span class="category-chip">웹 서비스</span></div>
+        <h2>출결 관리 시스템</h2>
+        <p>동아리 운영 중 반복되던 수기 출석 확인과 누락 문제를 줄이기 위해 직접 만든 내부 관리 도구입니다.</p>
+        <div class="project-meta"><span>문제 해결형</span><button class="like-button" type="button" data-project="attendance" aria-label="출결 관리 시스템 좋아요">♡ <span>좋아요</span></button></div>
+      </article>
+    </div>
+    <div class="empty-state" id="project-empty" hidden><strong>검색 결과가 없습니다.</strong><p>다른 키워드나 분류를 선택해 보세요.</p></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Donggyun Han · HTML + CSS + Vanilla JS</p>
+    <div class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="lifestyle.html">취향</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="tmi.html">퀴즈</a>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <strong id="toast-title">알림</strong>
+  <span id="toast-message">처리되었습니다.</span>
+</div>
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" type="button" aria-label="팝업 닫기">×</button>
+    <div class="modal-icon" id="modal-icon">👋</div>
+    <h2 id="modal-title">반갑습니다</h2>
+    <div id="modal-content"></div>
+  </section>
+</div>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

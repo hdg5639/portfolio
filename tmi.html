@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="한동균의 성격, 취향, 프로젝트와 TMI를 소개하는 MPA 웹사이트">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>I AM | TMI와 퀴즈</title>
+</head>
+<body data-page="tmi">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="한동균 사용설명서 홈">
+      <span class="brand-mark">I AM</span>
+      <span class="brand-text">한동균 사용설명서</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="주요 메뉴">
+      <a class="nav-link" data-page="home" href="index.html">한동균은 이런 사람</a>
+      <a class="nav-link" data-page="lifestyle" href="lifestyle.html">일상의 취향</a>
+      <a class="nav-link" data-page="projects" href="projects.html">만들고 몰입한 것</a>
+      <a class="nav-link" data-page="tmi" href="tmi.html">TMI &amp; 퀴즈</a>
+    </nav>
+
+    <div class="header-status" aria-label="게이미피케이션 현황">
+      <span>🌱 <strong id="header-xp">0 XP</strong></span>
+      <span>🏅 <strong id="header-badges">0/4</strong></span>
+    </div>
+
+    <button class="menu-button" id="menu-button" type="button" aria-label="모바일 메뉴 열기" aria-controls="mobile-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴">
+    <a class="mobile-nav-link" data-page="home" href="index.html">🙂 한동균은 이런 사람</a>
+    <a class="mobile-nav-link" data-page="lifestyle" href="lifestyle.html">🎹 일상의 취향</a>
+    <a class="mobile-nav-link" data-page="projects" href="projects.html">🛠️ 만들고 몰입한 것</a>
+    <a class="mobile-nav-link" data-page="tmi" href="tmi.html">🧩 TMI &amp; 퀴즈</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero section-shell">
+    <div>
+      <span class="eyebrow">TMI &amp; CHALLENGE</span>
+      <h1>쓸데없지만 기억에 남는 정보</h1>
+      <p>설명서의 마지막은 TMI와 퀴즈입니다. 페이지를 둘러보며 모은 XP와 배지도 여기서 확인할 수 있습니다.</p>
+    </div>
+    <img src="assets/images/tmi.svg" alt="물음표 카드와 배지 일러스트">
+  </section>
+
+  <section class="section-shell tmi-layout compact-section">
+    <div class="tmi-column">
+      <article class="card tmi-card">
+        <div class="section-heading left-heading"><span class="section-kicker">SMALL FACTS</span><h2>사소한 TMI</h2></div>
+        <dl class="tmi-list">
+          <div><dt>집중 환경</dt><dd>너무 조용한 곳보다 약간의 생활 소음이 있는 곳</dd></div>
+          <div><dt>커피</dt><dd>큰 것 하나를 옆에 두고 오래 조금씩 마시는 편</dd></div>
+          <div><dt>요즘 음악</dt><dd>Back Number 노래를 자주 듣는 중</dd></div>
+          <div><dt>게임 취향</dt><dd>FPS와 RPG 선호, AOS는 별로</dd></div>
+          <div><dt>구매 순서</dt><dd>성능 확인 → 후보 비교 → 가격 비교</dd></div>
+          <div><dt>최근 검색</dt><dd>가성비 좋은 청소기</dd></div>
+        </dl>
+      </article>
+
+      <article class="card gamification-card">
+        <div class="level-line"><div><span id="level-name">탐색 중</span><strong id="xp-label">0 / 200 XP</strong></div><progress id="xp-progress" max="200" value="0">0%</progress></div>
+        <h2>획득한 배지</h2>
+        <div class="badge-grid">
+          <div class="badge-item" data-badge="greeting"><span>👋</span><strong>첫인사</strong></div>
+          <div class="badge-item" data-badge="explorer"><span>🧭</span><strong>페이지 탐험가</strong></div>
+          <div class="badge-item" data-badge="empathy"><span>💚</span><strong>공감 요정</strong></div>
+          <div class="badge-item" data-badge="quiz"><span>🏆</span><strong>퀴즈 완주</strong></div>
+        </div>
+        <button class="button button-danger" id="reset-button" type="button">활동 기록 초기화</button>
+      </article>
+    </div>
+
+    <article class="card quiz-card">
+      <div class="quiz-header"><div><span class="section-kicker">QUIZ</span><h2>한동균 알아보기</h2></div><span id="quiz-counter">1 / 8</span></div>
+      <div id="quiz-area">
+        <div class="quiz-progress"><div id="quiz-progress-bar"></div></div>
+        <h3 id="quiz-question">문제를 불러오는 중입니다.</h3>
+        <div class="quiz-options" id="quiz-options"></div>
+        <p class="quiz-feedback" id="quiz-feedback" hidden></p>
+      </div>
+      <div class="quiz-result" id="quiz-result" hidden>
+        <span>🏆</span><h3>퀴즈를 모두 풀었습니다!</h3><p id="quiz-score"></p><button class="button button-primary" id="quiz-retry" type="button">다시 풀기</button>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Donggyun Han · HTML + CSS + Vanilla JS</p>
+    <div class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="lifestyle.html">취향</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="tmi.html">퀴즈</a>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <strong id="toast-title">알림</strong>
+  <span id="toast-message">처리되었습니다.</span>
+</div>
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" type="button" aria-label="팝업 닫기">×</button>
+    <div class="modal-icon" id="modal-icon">👋</div>
+    <h2 id="modal-title">반갑습니다</h2>
+    <div id="modal-content"></div>
+  </section>
+</div>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

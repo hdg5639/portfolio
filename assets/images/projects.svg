@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">프로젝트 일러스트</title><desc id="desc">서버, 클라우드, 코드 창을 표현한 일러스트</desc>
+  <rect width="640" height="360" rx="36" fill="#eefaf3"/>
+  <rect x="62" y="72" width="224" height="220" rx="24" fill="#fff" stroke="#d6e8de" stroke-width="6"/>
+  <rect x="89" y="105" width="170" height="45" rx="10" fill="#243447"/><circle cx="112" cy="128" r="6" fill="#03c75a"/><circle cx="133" cy="128" r="6" fill="#8ee5aa"/>
+  <rect x="89" y="166" width="170" height="45" rx="10" fill="#243447"/><circle cx="112" cy="189" r="6" fill="#03c75a"/><circle cx="133" cy="189" r="6" fill="#8ee5aa"/>
+  <rect x="89" y="227" width="170" height="45" rx="10" fill="#243447"/><circle cx="112" cy="250" r="6" fill="#03c75a"/><circle cx="133" cy="250" r="6" fill="#8ee5aa"/>
+  <path d="M412 119c-46 0-82 26-82 60 0 31 28 55 67 59 13 25 45 42 80 42 49 0 89-31 89-70 0-35-34-65-78-69-15-14-42-22-76-22z" fill="#03c75a"/>
+  <path d="M375 179h119M399 150l-29 29 29 29M470 150l29 29-29 29" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

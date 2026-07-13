@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">TMI와 퀴즈 일러스트</title><desc id="desc">물음표 카드와 배지를 표현한 일러스트</desc>
+  <rect width="640" height="360" rx="36" fill="#f5fff8"/>
+  <rect x="87" y="69" width="246" height="232" rx="28" fill="#fff" stroke="#d9ebe0" stroke-width="6"/>
+  <circle cx="210" cy="168" r="70" fill="#03c75a"/>
+  <path d="M185 146c0-19 13-35 37-35 22 0 37 14 37 34 0 15-8 24-23 33-11 7-16 13-16 26" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="220" cy="230" r="8" fill="#fff"/>
+  <path d="M449 91l32 20 37-7 6 39 29 27-25 30-2 39-38-3-34 18-18-35-34-19 14-36-7-38 39-7z" fill="#ffd75f" stroke="#e1ae20" stroke-width="7"/>
+  <path d="M441 193l-16 93 39-20 29 33 15-91" fill="#ff6b6b"/>
+  <path d="M458 127l13 25 28 4-20 20 5 28-26-13-25 13 5-28-21-20 29-4z" fill="#fff" opacity=".9"/>
+</svg>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="한동균의 성격, 취향, 프로젝트와 TMI를 소개하는 MPA 웹사이트">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>I AM | 일상의 취향</title>
+</head>
+<body data-page="lifestyle">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="한동균 사용설명서 홈">
+      <span class="brand-mark">I AM</span>
+      <span class="brand-text">한동균 사용설명서</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="주요 메뉴">
+      <a class="nav-link" data-page="home" href="index.html">한동균은 이런 사람</a>
+      <a class="nav-link" data-page="lifestyle" href="lifestyle.html">일상의 취향</a>
+      <a class="nav-link" data-page="projects" href="projects.html">만들고 몰입한 것</a>
+      <a class="nav-link" data-page="tmi" href="tmi.html">TMI &amp; 퀴즈</a>
+    </nav>
+
+    <div class="header-status" aria-label="게이미피케이션 현황">
+      <span>🌱 <strong id="header-xp">0 XP</strong></span>
+      <span>🏅 <strong id="header-badges">0/4</strong></span>
+    </div>
+
+    <button class="menu-button" id="menu-button" type="button" aria-label="모바일 메뉴 열기" aria-controls="mobile-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴">
+    <a class="mobile-nav-link" data-page="home" href="index.html">🙂 한동균은 이런 사람</a>
+    <a class="mobile-nav-link" data-page="lifestyle" href="lifestyle.html">🎹 일상의 취향</a>
+    <a class="mobile-nav-link" data-page="projects" href="projects.html">🛠️ 만들고 몰입한 것</a>
+    <a class="mobile-nav-link" data-page="tmi" href="tmi.html">🧩 TMI &amp; 퀴즈</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero section-shell">
+    <div>
+      <span class="eyebrow">MY LIFESTYLE</span>
+      <h1>일상에서 드러나는 취향</h1>
+      <p>거창한 가치관보다 쉬는 방식, 소비 습관, 좋아하고 싫어하는 것들이 사람을 더 잘 설명한다고 생각합니다.</p>
+    </div>
+    <img src="assets/images/lifestyle.svg" alt="피아노, 게임패드, 자동차 일러스트">
+  </section>
+
+  <section class="section-shell compact-section">
+    <div class="three-grid">
+      <article class="card feature-card">
+        <span class="card-icon">💚</span><h2>좋아하는 것</h2>
+        <p>피아노, FPS와 RPG 게임, 목적지 없는 드라이브, 자동차와 전자기기 스펙 비교.</p>
+        <button class="text-button detail-button" data-detail="likes" type="button">조금 더 보기 →</button>
+      </article>
+      <article class="card feature-card">
+        <span class="card-icon">🙅</span><h2>잘 맞지 않는 것</h2>
+        <p>이유 없는 반복 작업, 앞뒤가 맞지 않는 말, 책임질 생각 없이 일을 벌이는 태도.</p>
+        <button class="text-button detail-button" data-detail="dislikes" type="button">조금 더 보기 →</button>
+      </article>
+      <article class="card feature-card">
+        <span class="card-icon">🏠</span><h2>생활 방식</h2>
+        <p>SSAFY 일정을 제외하면 대부분 집에서 보냅니다. 혼자 있어도 크게 심심하지 않은 편입니다.</p>
+        <button class="text-button detail-button" data-detail="routine" type="button">조금 더 보기 →</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-shell compact-section">
+    <div class="section-heading">
+      <span class="section-kicker">BALANCE GAME</span>
+      <h2>취향 밸런스 게임</h2>
+      <p>둘 중 하나를 선택하면 동균의 실제 선택을 확인할 수 있습니다.</p>
+    </div>
+    <div class="balance-list">
+      <article class="balance-row" data-balance="place">
+        <div><strong>집</strong><span>vs</span><strong>밖</strong></div>
+        <div class="choice-group"><button type="button" data-choice="집">집</button><button type="button" data-choice="밖">밖</button></div>
+        <small class="donggyun-choice" hidden>동균의 선택: 집, 가끔 답답하면 드라이브</small>
+      </article>
+      <article class="balance-row" data-balance="plan">
+        <div><strong>계획</strong><span>vs</span><strong>즉흥</strong></div>
+        <div class="choice-group"><button type="button" data-choice="계획">계획</button><button type="button" data-choice="즉흥">즉흥</button></div>
+        <small class="donggyun-choice" hidden>동균의 선택: 큰 틀만 계획하고 대부분 즉흥</small>
+      </article>
+      <article class="balance-row" data-balance="contact">
+        <div><strong>전화</strong><span>vs</span><strong>문자</strong></div>
+        <div class="choice-group"><button type="button" data-choice="전화">전화</button><button type="button" data-choice="문자">문자</button></div>
+        <small class="donggyun-choice" hidden>동균의 선택: 문자</small>
+      </article>
+      <article class="balance-row" data-balance="people">
+        <div><strong>여럿</strong><span>vs</span><strong>소수</strong></div>
+        <div class="choice-group"><button type="button" data-choice="여럿">여럿</button><button type="button" data-choice="소수">소수</button></div>
+        <small class="donggyun-choice" hidden>동균의 선택: 소수</small>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-shell compact-section">
+    <div class="section-heading left-heading"><span class="section-kicker">LIFE GAUGE</span><h2>대략적인 성향 수치</h2></div>
+    <div class="gauge-card card">
+      <div class="gauge-item"><div><span>혼자 있는 시간</span><strong>80%</strong></div><progress max="100" value="80">80%</progress></div>
+      <div class="gauge-item"><div><span>낯가림</span><strong>80%</strong></div><progress max="100" value="80">80%</progress></div>
+      <div class="gauge-item"><div><span>계획성</span><strong>20%</strong></div><progress max="100" value="20">20%</progress></div>
+      <div class="gauge-item"><div><span>호기심</span><strong>100%</strong></div><progress max="100" value="100">100%</progress></div>
+      <div class="gauge-item"><div><span>관심 분야 집착</span><strong>100%</strong></div><progress max="100" value="100">100%</progress></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Donggyun Han · HTML + CSS + Vanilla JS</p>
+    <div class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="lifestyle.html">취향</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="tmi.html">퀴즈</a>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <strong id="toast-title">알림</strong>
+  <span id="toast-message">처리되었습니다.</span>
+</div>
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" type="button" aria-label="팝업 닫기">×</button>
+    <div class="modal-icon" id="modal-icon">👋</div>
+    <h2 id="modal-title">반갑습니다</h2>
+    <div id="modal-content"></div>
+  </section>
+</div>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
