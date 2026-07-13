@@ -482,6 +482,21 @@ progress::-moz-progress-bar { background: linear-gradient(90deg, var(--green), #
 .toast span { color: var(--muted); font-size: 0.86rem; }
 .modal-backdrop { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 18px; background: rgba(16, 28, 21, 0.58); animation: fade 0.2s ease; }
 .modal { position: relative; width: min(480px, 100%); padding: 34px; border-radius: 24px; background: #fff; box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24); animation: pop 0.25s ease; }
+
+/* TMI 힌트 모달: 데스크톱에서 충분한 가로폭을 확보해 문장 줄바꿈 방지 */
+.modal:has(.tmi-modal-list) {
+  width: min(680px, calc(100vw - 36px));
+}
+
+.modal:has(.tmi-modal-list) .tmi-modal-list div {
+  grid-template-columns: 100px minmax(0, 1fr);
+}
+
+.modal:has(.tmi-modal-list) .tmi-modal-list dd {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
 .modal-close { position: absolute; top: 13px; right: 15px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #f0f3f1; cursor: pointer; font-size: 1.35rem; }
 .modal-icon { font-size: 2.8rem; }
 .modal h2 { margin: 8px 0 10px; }
@@ -504,6 +519,17 @@ progress::-moz-progress-bar { background: linear-gradient(90deg, var(--green), #
 }
 
 @media (max-width: 800px) {
+
+  .modal:has(.tmi-modal-list) {
+    width: min(620px, calc(100vw - 36px));
+  }
+
+  .modal:has(.tmi-modal-list) .tmi-modal-list dd {
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
   .header-status { display: none; }
   .brand-text { font-size: 0.92rem; }
   .hero, .page-hero { min-height: auto; grid-template-columns: 1fr; padding: 52px 0 20px; }
@@ -537,6 +563,17 @@ progress::-moz-progress-bar { background: linear-gradient(90deg, var(--green), #
 }
 
 @media (max-width: 560px) {
+
+  .modal:has(.tmi-modal-list) {
+    width: 100%;
+  }
+
+  .modal:has(.tmi-modal-list) .tmi-modal-list dd {
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
   .header-inner { width: min(100% - 22px, 1180px); height: 64px; gap: 10px; }
   .brand-text { display: none; }
   .section-shell, .footer-inner { width: min(100% - 24px, 1140px); }
