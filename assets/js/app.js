@@ -44,6 +44,18 @@
     }
   };
 
+  const tmiTipHTML = `
+    <p class="tmi-modal-note">퀴즈가 헷갈릴 때 참고할 수 있는 동균의 사소한 정보들입니다.</p>
+    <dl class="tmi-modal-list">
+      <div><dt>집중 환경</dt><dd>너무 조용한 곳보다 약간의 생활 소음이 있는 곳</dd></div>
+      <div><dt>커피</dt><dd>큰 것 하나를 옆에 두고 오래 조금씩 마시는 편</dd></div>
+      <div><dt>요즘 음악</dt><dd>Back Number 노래를 자주 듣는 중</dd></div>
+      <div><dt>게임 취향</dt><dd>FPS와 RPG 선호, AOS는 별로</dd></div>
+      <div><dt>구매 순서</dt><dd>성능 확인 → 후보 비교 → 가격 비교</dd></div>
+      <div><dt>최근 검색</dt><dd>가성비 좋은 청소기</dd></div>
+    </dl>
+  `;
+
   const quizData = [
     {
       id: 'hard-quiz-v1-q1',
@@ -151,6 +163,7 @@
     setupGreeting();
     setupRevealAnimation();
     setupLifestyleDetails();
+    setupTmiTip();
     setupBalanceGame();
     setupProjectFilter();
     setupProjectLikes();
@@ -303,6 +316,15 @@
         if (!detail) return;
         openModal(detail.icon, detail.title, detail.html);
       });
+    });
+  }
+
+  function setupTmiTip() {
+    const button = document.querySelector('#tmi-tip-button');
+    if (!button) return;
+
+    button.addEventListener('click', () => {
+      openModal('💡', '사소한 TMI 힌트', tmiTipHTML);
     });
   }
 
